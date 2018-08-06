@@ -1,5 +1,5 @@
 using System;
-using AlgorithmsAndDataStructures;
+using DataStructures;
 using Xunit;
 
 namespace DataStructureTests

@@ -1,9 +1,5 @@
-﻿using System;
-
-namespace AlgorithmsAndDataStructures
+﻿namespace DataStructures
 {
-    using System;
-
     public class ReversedLinkedList
     {
         public LinkedListNode ReverseLinkedList(LinkedListNode old)
