@@ -1,4 +1,5 @@
-AlgorithmsAndDataStructures/bin/*
-AlgorithmsAndDataStructures/obj/*
+DataStructures/bin/*
+DataStructures/obj/*
 DataStructureTests/bin/*
 DataStructureTests/obj/*
+.idea
