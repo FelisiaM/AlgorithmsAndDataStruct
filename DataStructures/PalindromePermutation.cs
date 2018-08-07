@@ -42,24 +42,6 @@ namespace DataStructures
             return true;
         }
 
-        private void CountEvenAndOddCharSum(
-            Dictionary<char, int> charMap,
-            ref int evenCharsSum,
-            ref int oddCharsSum)
-        {
-            foreach (var keyValuePair in charMap)
-            {
-                if (IsEvenNumber(keyValuePair.Value))
-                {
-                    evenCharsSum++;
-                }
-                else
-                {
-                    oddCharsSum++;
-                }
-            }
-        }
-
         private Dictionary<char, int> CreateCharactersMap(string inputString)
         {
             var charMap = new Dictionary<char, int>();
@@ -76,6 +58,24 @@ namespace DataStructures
                 }
             }
             return charMap;
+        }
+
+        private void CountEvenAndOddCharSum(
+            Dictionary<char, int> charMap,
+            ref int evenCharsSum,
+            ref int oddCharsSum)
+        {
+            foreach (var keyValuePair in charMap)
+            {
+                if (IsEvenNumber(keyValuePair.Value))
+                {
+                    evenCharsSum++;
+                }
+                else
+                {
+                    oddCharsSum++;
+                }
+            }
         }
 
         private bool IsEvenNumber(int input)
