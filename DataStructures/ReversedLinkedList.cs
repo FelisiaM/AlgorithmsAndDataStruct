@@ -4,16 +4,18 @@
     {
         public LinkedListNode ReverseLinkedList(LinkedListNode old)
         {
-            var reversedLinkedList = new LinkedListNode();
-            reversedLinkedList.Data = old.Data;
+            var reversedLinkedList = new LinkedListNode
+            {
+                Data = old.Data
+            };
 
             while (old != null && old.Next != null)
             {
                 old = old.Next;
-                var t = new LinkedListNode();
-                t.Data = old.Data;
-                t.Next = reversedLinkedList;
-                reversedLinkedList = t;
+                var temp = new LinkedListNode();
+                temp.Data = old.Data;
+                temp.Next = reversedLinkedList;
+                reversedLinkedList = temp;
             }
 
             return reversedLinkedList;

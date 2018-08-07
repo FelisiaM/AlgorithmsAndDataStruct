@@ -34,5 +34,23 @@ namespace DataStructureTests
             Assert.Equal(input.Next.Data, result.Next.Next.Data);
             Assert.Equal(input.Data, result.Next.Next.Next.Data);
         }
+
+        [Fact]
+        public void Should_ReturnReversedLinkedList_When_LinkedListWithOneItemIsPassed()
+        {
+            // [arrange]
+            var underTest = new ReversedLinkedList();
+            var input = new LinkedListNode()
+            {
+                Data = 9
+            };
+
+            // [act]
+            var result = underTest.ReverseLinkedList(input);
+
+            // [assert]
+            Assert.Equal(input.Data, result.Data);
+            Assert.Null(result.Next);
+        }
     }
 }
