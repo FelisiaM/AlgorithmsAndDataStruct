@@ -4,6 +4,12 @@
     {
         public LinkedListNode ReverseLinkedList(LinkedListNode old)
         {
+            if (old == null ||
+               (old.Data == null && old.Next == null))
+            {
+                return old;
+            }
+
             var reversedLinkedList = new LinkedListNode
             {
                 Data = old.Data
@@ -25,6 +31,6 @@
     public class LinkedListNode
     {
         public LinkedListNode Next { get; set; }
-        public int Data { get; set; }
+        public int? Data { get; set; }
     }
 }
