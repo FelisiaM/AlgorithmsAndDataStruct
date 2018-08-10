@@ -1,8 +1,7 @@
-﻿using System;
-using DataStructures;
+﻿using DataStructures.HashTables;
 using Xunit;
 
-namespace DataStructureTests
+namespace DataStructureTests.HashTables
 {
     
     public class PalindromePermutationTests

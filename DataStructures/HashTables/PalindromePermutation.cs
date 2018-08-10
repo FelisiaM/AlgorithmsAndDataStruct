@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DataStructures
+namespace DataStructures.HashTables
 {
     /// <summary>
     /// Given a string, write a function to check if it is a permutation of a palindrome.

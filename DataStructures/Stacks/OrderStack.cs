@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DataStructures
+namespace DataStructures.Stacks
 {
     public class OrderStack
     {

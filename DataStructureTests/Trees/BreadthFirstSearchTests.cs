@@ -1,13 +1,12 @@
-﻿using System;
-using DataStructures.Trees;
+﻿using DataStructures.Trees;
 using Xunit;
 
-namespace DataStructureTests
+namespace DataStructureTests.Trees
 {
-    public class DepthFirstSearchTests
+    public class BreadthFirstSearchTests
     {
         [Fact]
-        public void Should_TraverseAllNodesInDepthFirstOrder_When_Called()
+        public void Should_TraverseAllNodesInBreadthFirstOrder_When_Called()
         {
             // [arrange]
             var node0 = new Node("0");
@@ -25,18 +24,19 @@ namespace DataStructureTests
                 node0, node1, node2, node3, node4, node5
             };
 
-            var underTest = new DepthFirstSearch();
+            var underTest = new BreadthFirstSearch();
 
             // [act]
             underTest.TraverseAndPrint(node0);
 
             // [assert]
-            Assert.Equal("0", underTest.DfsOrderedList[0]);
-            Assert.Equal("1", underTest.DfsOrderedList[1]);
-            Assert.Equal("3", underTest.DfsOrderedList[2]);
-            Assert.Equal("2", underTest.DfsOrderedList[3]);
-            Assert.Equal("4", underTest.DfsOrderedList[4]);
-            Assert.Equal("5", underTest.DfsOrderedList[5]);
+
+            Assert.Equal("0", underTest.BfsOrderedList[0]);
+            Assert.Equal("1", underTest.BfsOrderedList[1]);
+            Assert.Equal("4", underTest.BfsOrderedList[2]);
+            Assert.Equal("5", underTest.BfsOrderedList[3]);
+            Assert.Equal("3", underTest.BfsOrderedList[4]);
+            Assert.Equal("2", underTest.BfsOrderedList[5]);
         }
     }
 }

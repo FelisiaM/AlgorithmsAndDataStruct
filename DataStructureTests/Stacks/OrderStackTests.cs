@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using DataStructures;
+using DataStructures.Stacks;
 using Xunit;
 
-namespace DataStructureTests
+namespace DataStructureTests.Stacks
 {
     public class OrderStackTests
     {

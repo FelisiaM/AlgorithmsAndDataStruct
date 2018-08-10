@@ -1,4 +1,4 @@
-﻿namespace DataStructures
+﻿namespace DataStructures.LinkedLists
 {
     public class ReversedLinkedList
     {

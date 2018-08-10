@@ -1,7 +1,7 @@
-using DataStructures;
+using DataStructures.LinkedLists;
 using Xunit;
 
-namespace DataStructureTests
+namespace DataStructureTests.LinkedLists
 {
     public class ReversedLinkedListTests
     {
