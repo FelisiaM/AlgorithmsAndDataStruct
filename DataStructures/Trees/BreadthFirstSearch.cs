@@ -19,7 +19,6 @@ namespace DataStructures.Trees
 
         public void TraverseAndPrint(Node root)
         {
-
             if (root == null)
             {
                 return;
