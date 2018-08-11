@@ -46,9 +46,7 @@ namespace DataStructures.Trees
 
                 while (currentQueue.Count != 0)
                 {
-                    var nextLinkedListNode = new LinkedListNode();
                     var currentNode = currentQueue.Dequeue();
-                    nextLinkedListNode.Data = currentNode.Value;
 
                     headLinkedListNode.AddLast(currentNode.Value);
 
@@ -71,6 +69,36 @@ namespace DataStructures.Trees
             return linkedListNodes;
         }
 
-        
+        public List<LinkedList<BinaryTreeNode>> ConvertToLinkedListsOption2(BinaryTreeNode root)
+        {
+            var linkedListNodes = new List<LinkedList<BinaryTreeNode>>();
+                
+            var current = new LinkedList<BinaryTreeNode>();
+            if (root != null)
+            {
+                current.AddLast(root);
+            }
+
+            while (current.Count != 0)
+            {
+                linkedListNodes.Add(current);
+                var parents = current;
+                current = new LinkedList<BinaryTreeNode>();
+                foreach (var parent in parents)
+                {
+                    if (parent.LeftNode != null)
+                    {
+                        current.AddLast(parent.LeftNode);
+                    }
+                    if (parent.RightNode != null)
+                    {
+                        current.AddLast(parent.RightNode);
+                    }
+                }
+
+            }
+
+            return linkedListNodes;
+        }
     }
 }
